@@ -1,0 +1,91 @@
+<div class="sp-content-out members-section" id="staff3-members-1">
+    <div class="container">
+        <h2 class="section-header text-center">Workstream Leaders</h2>
+        <!-- Row 1 of Head Shots -->
+        <div class="headshots-row">
+            <div class="row">
+                <!-- Row 1 Head Shot 1 -->
+                <div class="col-sm-4 headshot-item">
+                    <div class="headshot-inner">
+                        <div class="headshot-img"> <img src="https://cdn.ymaws.com/iot.site-ym.com/resource/resmgr/custompages/325x325.png" alt="/" class="img-responsive center-block" /> </div>
+                        <div class="headshot-info">
+                            <h6>Name</h6>
+                            <p class="title">Title</p>
+                            <a class="email" href="mailto:email@email.com">Email</a>
+                            <a class="bioBTN" data-target="#bio1" href="#">Read Bio</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row 1 Head Shot 2 -->
+                <div class="col-sm-4 headshot-item">
+                    <div class="headshot-inner">
+                        <div class="headshot-img"> <img src="https://cdn.ymaws.com/iot.site-ym.com/resource/resmgr/custompages/325x325.png" alt="/" class="img-responsive center-block" /> </div>
+                        <div class="headshot-info">
+                            <h6>Name</h6>
+                            <p class="title">Title</p>
+                            <a class="email" href="mailto:email@email.com">Email</a>
+                            <a class="bioBTN" data-target="#bio2" href="#">Read Bio</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row 1 Head Shot 3 -->
+                <div class="col-sm-4 headshot-item">
+                    <div class="headshot-inner">
+                        <div class="headshot-img"> <img src="https://cdn.ymaws.com/iot.site-ym.com/resource/resmgr/custompages/325x325.png" alt="/" class="img-responsive center-block" /> </div>
+                        <div class="headshot-info">
+                            <h6>Name</h6>
+                            <p class="title">Title</p>
+                            <a class="email" href="mailto:email@email.com">Email</a>
+                            <a class="bioBTN" data-target="#bio3" href="#">Read Bio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Dropdown Bios -->
+        <div class="bios-row">
+            <!-- Bio 1 Content -->
+            <div id="bio1" class="bio" style="display: none;"> <a class="close" id="close1" href="#">Close</a>
+                <div class="row">
+                    <!--Bio Image-->
+                    <div class="bioIMG col-sm-3"> <img src="https://cdn.ymaws.com/iot.site-ym.com/resource/resmgr/custompages/275x275.png" alt="/" class="img-responsive center-block" /> </div>
+                    <!--Bio Content-->
+                    <div class="bioContent col-sm-9">
+                        <h3>Name 1</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Bio 2 Content -->
+            <div id="bio2" class="bio" style="overflow: hidden; display: none;"> <a class="close" id="close2" href="#">Close</a>
+                <div class="row">
+                    <!--Bio Image-->
+                    <div class="bioIMG col-sm-3"> <img src="https://cdn.ymaws.com/iot.site-ym.com/resource/resmgr/custompages/275x275.png" alt="/" class="img-responsive center-block" /> </div>
+                    <!--Bio Content-->
+                    <div class="bioContent col-sm-9">
+                        <h3>Name 2</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Bio 3 Content -->
+            <div id="bio3" class="bio" style="display: none;"> <a class="close" id="close3" href="#">Close</a>
+                <div class="row">
+                    <!--Bio Image-->
+                    <div class="bioIMG col-sm-3"> <img src="https://cdn.ymaws.com/iot.site-ym.com/resource/resmgr/custompages/275x275.png" alt="/" class="img-responsive center-block" /> </div>
+                    <!--Bio Content-->
+                    <div class="bioContent col-sm-9">
+                        <h3>Name 3</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
