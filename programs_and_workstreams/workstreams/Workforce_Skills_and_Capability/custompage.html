@@ -120,10 +120,10 @@
     .headshot-inner {
       padding: 0;
     }
-    .bio {
+    .data {
       display: none !important;
     }
-    .bioBTN {
+    .dataBTN {
       display: none;
     }
     }
@@ -229,10 +229,10 @@
 <!-- Dropdown Data -->
 <div class="row staff-bios-row">
     <div class="row">
-      <div id="data1" class="data" style="display: none; width: 100%;"> 
+      <div id="data1" class="data" style="display: none;"> 
         <div class="container">
-        <a class="close" id="data1-close1" href="#" style="position: relative;">Close</a>
-        <h3>Frank Zeichner</h3>
+          <a class="close" style="position: relative;">Close</a>
+          <h3>Frank Zeichner</h3>
         <p>
           Frank is a thought leader in the adoption of Internet of Things (IoT), 
           and the founding CEO of IoTAA. 
@@ -300,9 +300,9 @@
       });
       //close button Inside the bio
       $('.close').click(function(){
-    	var myTarget = $(this);
-    	myTarget.parent().slideUp();
-    	return false ;
+        var myTarget = $(this).closest('.data'); // Find the closest parent div with class "data"
+        myTarget.slideUp();
+        return false;
     	});
       //Close Bio by cliking outside  	
       var $win = $(window); // or $box parent container
