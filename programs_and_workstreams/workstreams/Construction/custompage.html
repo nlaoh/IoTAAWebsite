@@ -127,19 +127,41 @@
       display: none;
     }
     }
+  /* Dropdown box */
+  .data {
+    background: #f7f7f7;
+    padding: 20px;
+    margin: 30px 0 35px;
+    position: relative;
+  }
+  .dataContent h2 {
+    margin-top: 0;
+  }
+  .close {
+    position: absolute;
+    right: 16px;
+    z-index: 100;
+    font-size: 12px;
+    text-decoration: underline;
+  }
+  .close:hover {
+    color: #222;
+    text-decoration: underline;
+  }
 
-    .resource-column {
+  /* This is for aligining the buttons */
+  .resource-column {
         display: flex;
         flex-direction: column; 
         justify-content: space-between; 
         height: 135px;
     }
-    .memberandteams-column {
-        display: flex;
-        flex-direction: column; 
-        justify-content: space-between; 
-        height: 185px;
-    }
+  .memberandteams-column {
+      display: flex;
+      flex-direction: column; 
+      justify-content: space-between; 
+      height: 185px;
+  }
 </style>
 
 <!-- Top Hero Starts -->
@@ -177,51 +199,125 @@
             <div class="col-sm-6 col-lg-3 generalUse4-col resource-column">
                 <!-- Column 1 Row 1 -->
                 <div class="row generalUse4-wrap">
-                    <h5><i class="fas fa-user"></i> Advocacy</h5>
-                    <p>Includes thought leadership, whitepapers, and government submissions</p>
+                  <h5><i class="fas fa-user"></i> Advocacy</h5>
+                  <p>Includes thought leadership, whitepapers, and government submissions</p>
                 </div>
                 <!-- Column 1 Row 2 -->
                 <div class="row generalUse4-wrap">
-                    <a href="/" class="formbutton">Read More</a>
+                  <a class="formbutton dataBTN" data-target="#data1">Read More</a>
                 </div>
             </div>
             <!-- Column 2 -->
             <div class="col-sm-6 col-lg-3 generalUse4-col resource-column">
                 <!-- Column 2 Row 1 -->
                 <div class="row generalUse4-wrap">
-                    <h5><i class="fas fa-wrench"></i> Practice</h5>
-                    <p>Find guidelines, standards, and case studies</p>
+                  <h5><i class="fas fa-wrench"></i> Practice</h5>
+                  <p>Find guidelines, standards, and case studies</p>
                 </div>
                 <!-- Column 2 Row 2 -->
                 <div class="row generalUse4-wrap">
-                    <a href="/" class="formbutton">Read More</a>
+                  <a class="formbutton dataBTN" data-target="#data2">Read More</a>
                 </div>
             </div>
             <!-- Column 3 -->
             <div class="col-sm-6 col-lg-3 generalUse4-col resource-column">
                 <!-- Column 3 Row 1 -->
                 <div class="row generalUse4-wrap">
-                    <h5><i class="fas fa-search"></i> Useful links</h5>
-                    <p>Access to sites with relevant and interesting content</p>
+                  <h5><i class="fas fa-search"></i> Useful links</h5>
+                  <p>Access to sites with relevant and interesting content</p>
                 </div>
                 <!-- Column 3 Row 2 -->
                 <div class="row generalUse4-wrap">
-                    <a href="/" class="formbutton">Read More</a>
+                  <a class="formbutton dataBTN" data-target="#data3">Read More</a>
                 </div>
             </div>
             <!-- Column 4 -->
             <div class="col-sm-6 col-lg-3 generalUse4-col resource-column">
                 <!-- Column 4 Row 1 -->
                 <div class="row generalUse4-wrap">
-                    <h5><i class="fas fa-book"></i> Presentations</h5>
-                    <p>Webinars, slides, workstream packs, and event material</p>
+                  <h5><i class="fas fa-book"></i> Presentations</h5>
+                  <p>Webinars, slides, workstream packs, and event material</p>
                 </div>
                 <!-- Column 4 Row 2 -->
                 <div class="row generalUse4-wrap">
-                    <a href="/" class="formbutton">Read More</a>
+                  <a class="formbutton dataBTN" data-target="#data4">Read More</a>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- Dropdown Data -->
+<div class="row staff-bios-row">
+    <div class="row">
+      <div id="data1" class="data" style="display: none;"> 
+        <div class="container">
+          <a class="close" style="position: relative;">Close</a>
+          <h3>Frank Zeichner</h3>
+          <p>
+            Frank is a thought leader in the adoption of Internet of Things (IoT), 
+            and the founding CEO of IoTAA. 
+            He is a Partner Manager for the Reliable Affordable Clean Energy for 
+            2030 Cooperative Research Centre (RACE for 2030), an industry-led
+            an initiative that fosters innovation across the energy supply chain to deliver 
+            increased value for consumers. 
+            Frank is also on the board of the NSW Smart Sensing Network, which brings 
+            together smart sensing expertise in academia,
+            industry and government to deliver economic and social benefits for NSW.
+          </p>
+        </div>
+      </div>
+      <div id="data2" class="data" style="display: none;"> 
+        <div class="container">
+          <a class="close" style="position: relative;">Close</a>
+          <h3>Frank Zeichner222222</h3>
+          <p>
+            Frank is a thought leader in the adoption of Internet of Things (IoT), 
+            and the founding CEO of IoTAA. 
+            He is a Partner Manager for the Reliable Affordable Clean Energy for 
+            2030 Cooperative Research Centre (RACE for 2030), an industry-led
+            an initiative that fosters innovation across the energy supply chain to deliver 
+            increased value for consumers. 
+            Frank is also on the board of the NSW Smart Sensing Network, which brings 
+            together smart sensing expertise in academia,
+            industry and government to deliver economic and social benefits for NSW.
+          </p>
+        </div>
+      </div>
+      <div id="data3" class="data" style="display: none;"> 
+        <div class="container">
+          <a class="close" style="position: relative;">Close</a>
+          <h3>Frank Zeichner3333333</h3>
+          <p>
+            Frank is a thought leader in the adoption of Internet of Things (IoT), 
+            and the founding CEO of IoTAA. 
+            He is a Partner Manager for the Reliable Affordable Clean Energy for 
+            2030 Cooperative Research Centre (RACE for 2030), an industry-led
+            an initiative that fosters innovation across the energy supply chain to deliver 
+            increased value for consumers. 
+            Frank is also on the board of the NSW Smart Sensing Network, which brings 
+            together smart sensing expertise in academia,
+            industry and government to deliver economic and social benefits for NSW.
+          </p>
+        </div>
+      </div>
+      <div id="data4" class="data" style="display: none;"> 
+        <div class="container">
+          <a class="close" style="position: relative;">Close</a>
+          <h3>Frank Zeichner44444444</h3>
+          <p>
+            Frank is a thought leader in the adoption of Internet of Things (IoT), 
+            and the founding CEO of IoTAA. 
+            He is a Partner Manager for the Reliable Affordable Clean Energy for 
+            2030 Cooperative Research Centre (RACE for 2030), an industry-led
+            an initiative that fosters innovation across the energy supply chain to deliver 
+            increased value for consumers. 
+            Frank is also on the board of the NSW Smart Sensing Network, which brings 
+            together smart sensing expertise in academia,
+            industry and government to deliver economic and social benefits for NSW.
+          </p>
+        </div>
+      </div>
     </div>
 </div>
 
@@ -259,32 +355,34 @@
 </div>
 
 <!-- Script for Dropdown Bios -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script>
     $(document).ready(function(){	
       //Hide Bios//
-      var bioInfo = $('.bio').hide();
+      var bioInfo = $('.data').hide();
       //Click and bio Animation//
-      $('.bioBTN').click(function(){
+      $('.dataBTN').click(function(){
     	var target = $(this).data("target");
     	//Hide Open Bios When cliking Other Bio
-    	$(".bio").slideUp();
+    	$(".data").slideUp();
     	//Open Target Bio// 
     	$(target).slideDown();	
     	return false ;
       });
       //close button Inside the bio
       $('.close').click(function(){
-    	var myTarget = $(this);
-    	myTarget.parent().slideUp();
-    	return false ;
+        var myTarget = $(this).closest('.data'); // Find the closest parent div with class "data"
+        myTarget.slideUp();
+        return false;
     	});
       //Close Bio by cliking outside  	
       var $win = $(window); // or $box parent container
       var $box = $(".box");
       $win.on("click.Bst", function(event){		
-    	if ( $(".bio").has(event.target).length == 0 && !$(".bio").is(event.target) //checks if the $box itself was clicked
+    	if ( $(".data").has(event.target).length == 0 && !$(".data").is(event.target) //checks if the $box itself was clicked
     ){
-    	$(".bio").slideUp();
+    	$(".data").slideUp();
     	}
       });		  
     });
