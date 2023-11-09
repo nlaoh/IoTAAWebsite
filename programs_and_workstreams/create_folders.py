@@ -6,7 +6,7 @@ subdirectories = ["Advocacy", "Practice", "Useful_Links", "Presentations"]
 file_to_add = "placeholder.txt"
 
 # Define the starting directory path
-starting_directory = r'D:\GIT_REPOS\personalprojects\IoTAAWebsite\programs_and_workstreams\workstreams'
+starting_directory = r'D:\GIT_REPOS\personalprojects\IoTAAWebsite\programs_and_workstreams\programs'
 
 # Walk through the 'workstreams' directory
 for root, dirs, files in os.walk(starting_directory):
