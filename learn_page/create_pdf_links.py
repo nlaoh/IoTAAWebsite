@@ -10,8 +10,8 @@ def generate_html_links(directory_path):
     for filename in os.listdir(directory_path):
         # Check if the file is a PDF
         if filename.lower().endswith(".pdf"):
-            # Cut the filename (excluding ".pdf") at the 28th character
-            display_filename = filename[:-4][:28] + ".pdf"
+            # Replace whitespaces with underscores and cut the filename (excluding ".pdf") at the 28th character
+            display_filename = filename.replace(" ", "_")[:-4][:28] + ".pdf"
             
             # Generate and print the HTML code
             link = f'<a href="{display_filename}" target="_blank">{display_filename}</a>\n<br>'
