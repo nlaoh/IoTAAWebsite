@@ -274,36 +274,36 @@ ol {
 
 <script>
     $(document).ready(function(){	
-      //Hide Bios//
-      var dataInfo = $('.data').hide();
-      //Click and bio Animation//
-      $('.dataBTN').click(function(){
-        var target = $(this).data("target");
-        var $targetData = $(target);
+        //Hide Bios//
+        var dataInfo = $('.data').hide();
+        //Click and bio Animation//
+        $('.dataBTN').click(function(){
+            var target = $(this).data("target");
+            var $targetData = $(target);
 
-        // Toggle the visibility of the target bio
-        $targetData.slideToggle();
+            // Toggle the visibility of the target bio
+            $targetData.slideToggle();
 
-        // Hide other open bios when clicking the same button
-        $(".data").not($targetData).slideUp();
+            // Hide other open bios when clicking the same button
+            $(".data").not($targetData).slideUp();
 
-        return false;
-      });
+            return false;
+        });
 
-      // Close button Inside the bio
-      $('.close').click(function(){
-        var myTarget = $(this).closest('.data'); // Find the closest parent div with class "data"
-        myTarget.slideUp();
-        return false;
-      });
+        // Close button Inside the bio
+        $('.close').click(function(){
+            var myTarget = $(this).closest('.data'); // Find the closest parent div with class "data"
+            myTarget.slideUp();
+            return false;
+        });
 
-      // Close Bio by clicking outside  	
-      var $win = $(window); // or $box parent container
-      var $box = $(".box");
-      $win.on("click.Bst", function(event){		
-        if ($(".data").has(event.target).length == 0 && !$(".data").is(event.target)){
-          $(".data").slideUp();
-        }
-      });		  
+        // Close Bio by clicking outside  	
+        var $win = $(window); // or $box parent container
+        var $box = $(".box");
+        $win.on("click.Bst", function(event){		
+            if ($(".data").has(event.target).length == 0 && !$(".data").is(event.target)){
+            $(".data").slideUp();
+            }
+        });		  
     });
 </script>
