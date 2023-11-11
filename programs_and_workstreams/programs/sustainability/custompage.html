@@ -163,6 +163,24 @@
       justify-content: space-between; 
       height: 185px;
   }
+  /* Numbering of list */
+  ol {
+      padding-left:15px;
+  }
+  .numbered-list {
+      counter-reset: item;
+  }
+  .numbered-list a {
+      display: block;
+      margin-bottom: 8px; /* Adjust as needed */
+  }
+  .numbered-list a::before {
+      content: counter(item) ". ";
+      counter-increment: item;
+      display: inline-block;
+      width: 20px; /* Adjust as needed for spacing */
+      margin-right: 10px; /* Adjust margin to prevent overlap */
+  }
 </style>
 
 <!-- Top Hero Starts -->
@@ -253,16 +271,14 @@
     <div class="row">
         <div id="data1" class="data" style="display: none;">
             <div class="container">
+              <h3>Advocacy</h3>
                 <a class="close" style="position: relative;">Close</a>
-                <h3>Advocacy</h3>
-                <a href="/resource/resmgr/workstream_files/sustainability/government_consultation_pap.docx" target="_blank">Government Consultation Paper - Climate-Related Financial Disclosure</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/sustainability/iot_alliance_australia_submi.pdf" target="_blank">IoTAA Submission - Climate-related Financial Disclosure Consultation Paper</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/sustainability/scope3_calculation_guidance_.pdf" target="_blank">Greenhouse GAS Protocol - Technical Guidance for Calculating Scope 3 Emissions</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/sustainability/wired_for_change_regulation_.pdf" target="_blank">Wired for Change: Regulation for waste small electrical products and solar photovoltaic systems</a>
-                </br>
+                <ol class="numbered-list">
+                  <a href="/resource/resmgr/workstream_files/sustainability/government_consultation_pap.docx" target="_blank">Government Consultation Paper - Climate-Related Financial Disclosure</a>
+                  <a href="/resource/resmgr/workstream_files/sustainability/iot_alliance_australia_submi.pdf" target="_blank">IoTAA Submission - Climate-related Financial Disclosure Consultation Paper</a>
+                  <a href="/resource/resmgr/workstream_files/sustainability/scope3_calculation_guidance_.pdf" target="_blank">Greenhouse GAS Protocol - Technical Guidance for Calculating Scope 3 Emissions</a>
+                  <a href="/resource/resmgr/workstream_files/sustainability/wired_for_change_regulation_.pdf" target="_blank">Wired for Change: Regulation for waste small electrical products and solar photovoltaic systems</a>
+                </ol>
             </div>
         </div>
         <div id="data2" class="data" style="display: none;">
@@ -278,13 +294,13 @@
         </div>
         <div id="data3" class="data" style="display: none;">
             <div class="container">
-                <a class="close" style="position: relative;">Close</a>
                 <h3>Useful Links</h3>
-                <a href="https://www.cleanenergyregulator.gov.au/" target="_blank">Climate Energy Regulator</a>
-                </br>
-                <a href="https://carbonmarketinstitute.org/" target="_blank">Carbon Markets Institute</a>
-                </br>
-                <a href="https://www.infrastructurenetzero.org/theinitiative" target="_blank">Infrastructure Net Zero</a>
+                <a class="close" style="position: relative;">Close</a>
+                <ol class="numbered-list">
+                  <a href="https://www.cleanenergyregulator.gov.au/" target="_blank">Climate Energy Regulator</a>
+                  <a href="https://carbonmarketinstitute.org/" target="_blank">Carbon Markets Institute</a>
+                  <a href="https://www.infrastructurenetzero.org/theinitiative" target="_blank">Infrastructure Net Zero</a>
+                </ol>
             </div>
         </div>
         <div id="data4" class="data" style="display: none;">
@@ -339,31 +355,36 @@
 
 <script>
     $(document).ready(function(){	
-      //Hide Bios//
-      var bioInfo = $('.data').hide();
-      //Click and bio Animation//
-      $('.dataBTN').click(function(){
-    	var target = $(this).data("target");
-    	//Hide Open Bios When cliking Other Bio
-    	$(".data").slideUp();
-    	//Open Target Bio// 
-    	$(target).slideDown();	
-    	return false ;
-      });
-      //close button Inside the bio
-      $('.close').click(function(){
-        var myTarget = $(this).closest('.data'); // Find the closest parent div with class "data"
-        myTarget.slideUp();
-        return false;
-    	});
-      //Close Bio by cliking outside  	
-      var $win = $(window); // or $box parent container
-      var $box = $(".box");
-      $win.on("click.Bst", function(event){		
-    	if ( $(".data").has(event.target).length == 0 && !$(".data").is(event.target) //checks if the $box itself was clicked
-    ){
-    	$(".data").slideUp();
-    	}
-      });		  
+        //Hide Bios//
+        var dataInfo = $('.data').hide();
+        //Click and bio Animation//
+        $('.dataBTN').click(function(){
+            var target = $(this).data("target");
+            var $targetData = $(target);
+
+            // Toggle the visibility of the target bio
+            $targetData.slideToggle();
+
+            // Hide other open bios when clicking the same button
+            $(".data").not($targetData).slideUp();
+
+            return false;
+        });
+
+        // Close button Inside the bio
+        $('.close').click(function(){
+            var myTarget = $(this).closest('.data'); // Find the closest parent div with class "data"
+            myTarget.slideUp();
+            return false;
+        });
+
+        // Close Bio by clicking outside  	
+        var $win = $(window); // or $box parent container
+        var $box = $(".box");
+        $win.on("click.Bst", function(event){		
+            if ($(".data").has(event.target).length == 0 && !$(".data").is(event.target)){
+            $(".data").slideUp();
+            }
+        });		  
     });
 </script>
