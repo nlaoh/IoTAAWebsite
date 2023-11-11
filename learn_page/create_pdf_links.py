@@ -14,7 +14,7 @@ def generate_html_links(directory_path):
             display_filename = filename[:18]
             
             # Generate and print the HTML code
-            link = f'<a href="{filename}" target="_blank">{display_filename}</a><br>'
+            link = f'<a href="{filename}" target="_blank">{display_filename}</a>\n<br>'
             print(link)
 
 # Replace 'your_directory_path' with the path to your chosen directory
