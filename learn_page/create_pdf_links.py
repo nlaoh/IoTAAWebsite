@@ -25,7 +25,7 @@ def generate_html_links(directory_path, prefix):
         print(link)
 
 # Replace 'your_directory_path' with the path to your chosen directory
-your_directory_path = r'D:\GIT_REPOS\personalprojects\IoTAAWebsite\learn_page\Advocacy\smart_places_and_infrastructure'
-resource_manager_path = r'/resource/resmgr/workstream_files/smart_places_and_infrastructure/'
+your_directory_path = r'D:\GIT_REPOS\personalprojects\IoTAAWebsite\learn_page\Advocacy\water'
+resource_manager_path = r'/resource/resmgr/workstream_files/water/'
 generate_html_links(your_directory_path, resource_manager_path)
 print(resource_manager_path)
