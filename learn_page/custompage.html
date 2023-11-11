@@ -275,17 +275,17 @@ ol {
 <script>
     $(document).ready(function(){	
       //Hide Bios//
-      var bioInfo = $('.data').hide();
+      var dataInfo = $('.data').hide();
       //Click and bio Animation//
       $('.dataBTN').click(function(){
         var target = $(this).data("target");
-        var $targetBio = $(target);
+        var $targetData = $(target);
 
         // Toggle the visibility of the target bio
-        $targetBio.slideToggle();
+        $targetData.slideToggle();
 
         // Hide other open bios when clicking the same button
-        $(".data").not($targetBio).slideUp();
+        $(".data").not($targetData).slideUp();
 
         return false;
       });
