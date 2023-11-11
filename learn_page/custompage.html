@@ -233,7 +233,18 @@ ol {
                 <div class="container" style="width: 100%">
                     <a class="close" style="position: relative;">Close</a>
                     <h3>Guidelines &amp; Codes of Practice</h3>
-
+                    <ol class="numbered-list">
+                        <a href="/resource/resmgr/workstream_files/learn_page/Interoperability_by_Design.pdf" target="_blank">Interoperability by Design</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_IoT_Providers_Security.pdf" target="_blank">IoTAA IoT Providers Security Awareness Guide</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_IoT_Users_Security_Awa.pdf" target="_blank">IoTAA IoT Users Security Awareness Guide</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/Digital_Reference_Framework_.pdf" target="_blank">Digital Reference Framework for the Water Sector</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/Securing_the_Internet_of_Thi.pdf" target="_blank">Securing the Internet of Things for consumers</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoT_Reference_Framework_–_v1.pdf" target="_blank">IoT Reference Framework – v1.31</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoT_Reference_Framework_–_Ap.pdf" target="_blank">IoT Reference Framework – Application Guide v1.0</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_IoT_Platform_Selection.pdf" target="_blank">IoTAA_IoT Platform Selection Guideline V1.1</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/Good_Data_Practice-_A_Guide_.pdf" target="_blank">Good Data Practice- A Guide for B2C IoT Services for Australia</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_Security_Guideline_V1..pdf" target="_blank">IoTAA Security Guideline V1.2</a>
+                    </ol>
                 </div>
             </div>
             <!-- This is commented out as there is no sixth box -->
@@ -267,27 +278,32 @@ ol {
       var bioInfo = $('.data').hide();
       //Click and bio Animation//
       $('.dataBTN').click(function(){
-    	var target = $(this).data("target");
-    	//Hide Open Bios When cliking Other Bio
-    	$(".data").slideUp();
-    	//Open Target Bio// 
-    	$(target).slideDown();	
-    	return false ;
+        var target = $(this).data("target");
+        var $targetBio = $(target);
+
+        // Toggle the visibility of the target bio
+        $targetBio.slideToggle();
+
+        // Hide other open bios when clicking the same button
+        $(".data").not($targetBio).slideUp();
+
+        return false;
       });
-      //close button Inside the bio
+
+      // Close button Inside the bio
       $('.close').click(function(){
         var myTarget = $(this).closest('.data'); // Find the closest parent div with class "data"
         myTarget.slideUp();
         return false;
-    	});
-      //Close Bio by cliking outside  	
+      });
+
+      // Close Bio by clicking outside  	
       var $win = $(window); // or $box parent container
       var $box = $(".box");
       $win.on("click.Bst", function(event){		
-    	if ( $(".data").has(event.target).length == 0 && !$(".data").is(event.target) //checks if the $box itself was clicked
-    ){
-    	$(".data").slideUp();
-    	}
+        if ($(".data").has(event.target).length == 0 && !$(".data").is(event.target)){
+          $(".data").slideUp();
+        }
       });		  
     });
 </script>
