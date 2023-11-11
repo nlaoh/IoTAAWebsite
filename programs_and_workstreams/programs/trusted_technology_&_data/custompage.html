@@ -163,6 +163,45 @@
       justify-content: space-between; 
       height: 185px;
   }
+  /* Dropdown box */
+.data {
+    background: #f7f7f7;
+    padding: 20px;
+    margin: 30px 8px 35px;
+    position: relative;
+}
+.dataContent h2 {
+    margin-top: 0;
+}
+.close {
+    position: absolute;
+    right: 16px;
+    z-index: 100;
+    font-size: 12px;
+    text-decoration: underline;
+}
+.close:hover {
+    color: #222;
+    text-decoration: underline;
+}
+/* Numbering of list */
+ol {
+    padding-left:15px;
+}
+.numbered-list {
+    counter-reset: item;
+}
+.numbered-list a {
+    display: block;
+    margin-bottom: 8px; /* Adjust as needed */
+}
+.numbered-list a::before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    display: inline-block;
+    width: 20px; /* Adjust as needed for spacing */
+    margin-right: 10px; /* Adjust margin to prevent overlap */
+}
 </style>
 
 <!-- Top Hero Starts -->
@@ -255,73 +294,57 @@
             <div class="container">
                 <a class="close" style="position: relative;">Close</a>
                 <h3>Advocacy</h3>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/imcrc-highlights-and-achieve.pdf" target="_blank">IMCRC Highlights and Achievements Report 2016-22</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/is-industrial-automation-hea.pdf" target="_blank">Is Industrial Automation Headed for a Tipping Point?</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/rockwell_-eigth_annual_state.pdf" target="_blank">Rockwell - Eigth Annual State of Manufacturing Report</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iot_alliance_australia_submi.pdf" target="_blank">IoTAA Submission - Regulation of LoRaWAN</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_response_to_ai_regulat.pdf" target="_blank">IoTAA Response to AI Regulation Consultation</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/safe-and-responsible-ai-in-.docx" target="_blank">Safe and Responsible AI in Australia Discussion Paper</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_submission_agd_privacy.pdf" target="_blank">IoTAA Submission AGD Privacy Act Review</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_submission_to_the_onli.pdf" target="_blank">IoTAA submission to the Online Privacy Bill and Consultation Regulation Impact Statement</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_response_to_strategic.docx" target="_blank">IoTAA Response to Strategic Assessment Consultation of the Consumer Data Right and its Implementation</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iot__2023-2030_australian_cy.pdf" target="_blank">IoTAA 2023-2030 Australian Cyber Security Strategy</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/cisc-factsheet-systems-of-na.pdf" target="_blank">CISC - The Enhanced Cyber Security Obligations Framework</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_submission_reform_of_a.pdf" target="_blank">IoTAA Submission Reform of Australias Electronic Surveillance Framework</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa-submission-to-iot-secu.pdf" target="_blank">IoTAA Submission to IoT Security Code of Practice</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_response_to_strengthen.pdf" target="_blank">IoTAA Response to Strengthening Australia's Cyber Security Regulations and Incentives</a>
-                </br>
-
-
+                <ol class="numbered-list">
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/imcrc-highlights-and-achieve.pdf" target="_blank">IMCRC Highlights and Achievements Report 2016-22</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/is-industrial-automation-hea.pdf" target="_blank">Is Industrial Automation Headed for a Tipping Point?</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/rockwell_-eigth_annual_state.pdf" target="_blank">Rockwell - Eigth Annual State of Manufacturing Report</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iot_alliance_australia_submi.pdf" target="_blank">IoTAA Submission - Regulation of LoRaWAN</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_response_to_ai_regulat.pdf" target="_blank">IoTAA Response to AI Regulation Consultation</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/safe-and-responsible-ai-in-.docx" target="_blank">Safe and Responsible AI in Australia Discussion Paper</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_submission_agd_privacy.pdf" target="_blank">IoTAA Submission AGD Privacy Act Review</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_submission_to_the_onli.pdf" target="_blank">IoTAA submission to the Online Privacy Bill and Consultation Regulation Impact Statement</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_response_to_strategic.docx" target="_blank">IoTAA Response to Strategic Assessment Consultation of the Consumer Data Right and its Implementation</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iot__2023-2030_australian_cy.pdf" target="_blank">IoTAA 2023-2030 Australian Cyber Security Strategy</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/cisc-factsheet-systems-of-na.pdf" target="_blank">CISC - The Enhanced Cyber Security Obligations Framework</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_submission_reform_of_a.pdf" target="_blank">IoTAA Submission Reform of Australias Electronic Surveillance Framework</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa-submission-to-iot-secu.pdf" target="_blank">IoTAA Submission to IoT Security Code of Practice</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_response_to_strengthen.pdf" target="_blank">IoTAA Response to Strengthening Australia's Cyber Security Regulations and Incentives</a>
+                </ol>
             </div>
         </div>
         <div id="data2" class="data" style="display: none;">
             <div class="container">
                 <a class="close" style="position: relative;">Close</a>
                 <h3>Practice</h3>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iot_reference_framework_-_v.pptx" target="_blank">IOT Reference Framework</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_iot_providers_security.pdf" target="_blank">IoTAA IoT Providers Security Awareness Guide</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_iot_users_security_awa.pdf" target="_blank">IoTAA IoT Users Security Awareness Guide</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_iot_platform_selection.pdf" target="_blank">IoTAA_IoT Platform Selection Guideline</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/principles_approaches_for_se.pdf" target="_blank">Principles Approaches for Security-by-design-default</a>
+                <ol class="numbered-list">
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iot_reference_framework_-_v.pptx" target="_blank">IOT Reference Framework</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_iot_providers_security.pdf" target="_blank">IoTAA IoT Providers Security Awareness Guide</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_iot_users_security_awa.pdf" target="_blank">IoTAA IoT Users Security Awareness Guide</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iotaa_iot_platform_selection.pdf" target="_blank">IoTAA_IoT Platform Selection Guideline</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/principles_approaches_for_se.pdf" target="_blank">Principles Approaches for Security-by-design-default</a>
+                </ol>
             </div>
         </div>
         <div id="data3" class="data" style="display: none;">
             <div class="container">
                 <a class="close" style="position: relative;">Close</a>
                 <h3>Useful Links</h3>
-                <a href="https://www.acma.gov.au/" target="_blank">Australian Media and Communications Regulator</a>
-                </br>
-                <a href="https://www.oaic.gov.au/" target="_blank">Office of the Privacy Commissioner and the Independent National Regulator for Privacy and Freedom of Information</a>
-                </br>
-                <a href="https://www.accc.gov.au/" target="_blank">Australia's National Competition, Consumer, Fair Trading and Product Safety Regulator</a>
+                <ol class="numbered-list">
+                  <a href="https://www.acma.gov.au/" target="_blank">Australian Media and Communications Regulator</a>
+                  <a href="https://www.oaic.gov.au/" target="_blank">Office of the Privacy Commissioner and the Independent National Regulator for Privacy and Freedom of Information</a>
+                  <a href="https://www.accc.gov.au/" target="_blank">Australia's National Competition, Consumer, Fair Trading and Product Safety Regulator</a>
+                </ol>
             </div>
         </div>
         <div id="data4" class="data" style="display: none;">
             <div class="container">
                 <a class="close" style="position: relative;">Close</a>
                 <h3>Presentations</h3>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iot_reference_framework_-_co.pdf" target="_blank">IoT Reference Framework - Collaboration Platform</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iot_reference_framework_-_v.pptx" target="_blank">IoT Reference Framework</a>
-                </br>
-                <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/peter_leonard_reframing_our_.pdf" target="_blank">Peter Leonard Reframing our Thinking About Data Privacy and Interoperability</a>
+                <ol class="numbered-list">
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iot_reference_framework_-_co.pdf" target="_blank">IoT Reference Framework - Collaboration Platform</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/iot_reference_framework_-_v.pptx" target="_blank">IoT Reference Framework</a>
+                  <a href="/resource/resmgr/workstream_files/trusted_technology_and_data/peter_leonard_reframing_our_.pdf" target="_blank">Peter Leonard Reframing our Thinking About Data Privacy and Interoperability</a>
+                </ol>
             </div>
         </div>
     </div>
@@ -365,31 +388,36 @@
 
 <script>
     $(document).ready(function(){	
-      //Hide Bios//
-      var bioInfo = $('.data').hide();
-      //Click and bio Animation//
-      $('.dataBTN').click(function(){
-    	var target = $(this).data("target");
-    	//Hide Open Bios When cliking Other Bio
-    	$(".data").slideUp();
-    	//Open Target Bio// 
-    	$(target).slideDown();	
-    	return false ;
-      });
-      //close button Inside the bio
-      $('.close').click(function(){
-        var myTarget = $(this).closest('.data'); // Find the closest parent div with class "data"
-        myTarget.slideUp();
-        return false;
-    	});
-      //Close Bio by cliking outside  	
-      var $win = $(window); // or $box parent container
-      var $box = $(".box");
-      $win.on("click.Bst", function(event){		
-    	if ( $(".data").has(event.target).length == 0 && !$(".data").is(event.target) //checks if the $box itself was clicked
-    ){
-    	$(".data").slideUp();
-    	}
-      });		  
+        //Hide Bios//
+        var dataInfo = $('.data').hide();
+        //Click and bio Animation//
+        $('.dataBTN').click(function(){
+            var target = $(this).data("target");
+            var $targetData = $(target);
+
+            // Toggle the visibility of the target bio
+            $targetData.slideToggle();
+
+            // Hide other open bios when clicking the same button
+            $(".data").not($targetData).slideUp();
+
+            return false;
+        });
+
+        // Close button Inside the bio
+        $('.close').click(function(){
+            var myTarget = $(this).closest('.data'); // Find the closest parent div with class "data"
+            myTarget.slideUp();
+            return false;
+        });
+
+        // Close Bio by clicking outside  	
+        var $win = $(window); // or $box parent container
+        var $box = $(".box");
+        $win.on("click.Bst", function(event){		
+            if ($(".data").has(event.target).length == 0 && !$(".data").is(event.target)){
+            $(".data").slideUp();
+            }
+        });		  
     });
 </script>
