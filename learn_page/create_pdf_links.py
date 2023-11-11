@@ -6,16 +6,20 @@ def generate_html_links(directory_path):
         print("Invalid directory path.")
         return
     
-    # Iterate through files in the directory
-    for filename in os.listdir(directory_path):
-        # Check if the file is a PDF
-        if filename.lower().endswith(".pdf"):
-            # Replace whitespaces with underscores and cut the filename (excluding ".pdf") at the 28th character
-            display_filename = filename.replace(" ", "_")[:-4][:28] + ".pdf"
-            
-            # Generate and print the HTML code
-            link = f'<a href="{display_filename}" target="_blank">{display_filename}</a>\n<br>'
-            print(link)
+    # Get a list of files in the directory with modification times
+    files_with_times = [(filename, os.path.getmtime(os.path.join(directory_path, filename))) for filename in os.listdir(directory_path) if filename.lower().endswith(".pdf")]
+    
+    # Sort the files based on modification times
+    sorted_files = sorted(files_with_times, key=lambda x: x[1], reverse=False)
+    
+    # Iterate through sorted files
+    for filename, _ in sorted_files:
+        # Replace whitespaces with underscores and cut the filename (excluding ".pdf") at the 28th character
+        display_filename = filename.replace(" ", "_")[:-4][:28] + ".pdf"
+        
+        # Generate and print the HTML code
+        link = f'<a href="{display_filename}" target="_blank">{display_filename}</a>\n<br>'
+        print(link)
 
 # Replace 'your_directory_path' with the path to your chosen directory
 your_directory_path = r'D:\GIT_REPOS\personalprojects\IoTAAWebsite\learn_page\Advocacy'
