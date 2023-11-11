@@ -41,18 +41,18 @@ ol {
     padding-left:15px;
 }
 .numbered-list {
-  counter-reset: item;
+    counter-reset: item;
 }
 .numbered-list a {
-  display: block;
-  margin-bottom: 8px; /* Adjust as needed */
+    display: block;
+    margin-bottom: 8px; /* Adjust as needed */
 }
 .numbered-list a::before {
-  content: counter(item) ". ";
-  counter-increment: item;
-  display: inline-block;
-  width: 20px; /* Adjust as needed for spacing */
-  margin-right: 10px; /* Adjust margin to prevent overlap */
+    content: counter(item) ". ";
+    counter-increment: item;
+    display: inline-block;
+    width: 20px; /* Adjust as needed for spacing */
+    margin-right: 10px; /* Adjust margin to prevent overlap */
 }
 </style>
 
