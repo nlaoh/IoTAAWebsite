@@ -36,11 +36,29 @@
     color: #222;
     text-decoration: underline;
 }
+/* Numbering */
+ol {
+    padding-left:15px;
+}
+.numbered-list {
+  counter-reset: item;
+}
+.numbered-list a {
+  display: block;
+  margin-bottom: 8px; /* Adjust as needed */
+}
+.numbered-list a::before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  display: inline-block;
+  width: 20px; /* Adjust as needed for spacing */
+  margin-right: 10px; /* Adjust margin to prevent overlap */
+}
 </style>
 
 <!-- Top Hero Starts -->
 <div class="sp-hero-out" id="resources2-hero"> <img src="https://staging-iot.site-ym.com/resource/resmgr/learn-page_images/banner2.jpeg" alt="/" class="img-responsive" />
-    <div class="container">
+    <div class="container" style="background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.895)); width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
         <div class="sp-hero-content">
             <h1>RESOURCES</h1>
         </div>
@@ -113,9 +131,21 @@
                 <div class="container" style="width: 100%">
                     <a class="close" style="position: relative;">Close</a>
                     <h3>Advocacy</h3>
-                    <ul>
-                        <a href="/resource/resmgr/iotaa_response_to_ai_regulat.pdf" target="_blank">26th July 2023 - IoTAA response to AI regulation</a>
-                    </ul>
+                    <ol class="numbered-list">
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_submission_to_Telecomm.pdf" target="_blank">IoTAA submission to Telecommunications Industry Ombudsman Terms of Reference</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_submission_to_Departme.pdf" target="_blank">IoTAA submission to Department of Home Affairs consultation on Securing the Internet of Things for Consumers</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/5G_Enquiry_input_from_IoTAA.pdf" target="_blank">5G Enquiry input from IoTAA</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_submission_to_Australi.pdf" target="_blank">IoTAA submission to Australia’s 2020 Cyber security strategy</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_submission_to_Dept_of_.pdf" target="_blank">IoTAA submission to Dept of Industry – Digital Economy – Opening up the Conversation</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_Submission_Spectrum_Re.pdf" target="_blank">IoTAA Submission Spectrum Reform</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_Submission_to_Inquiry_.pdf" target="_blank">IoTAA Submission to Inquiry – Australian Governments Role in the Development of Cities</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_–_Further_submission_b.pdf" target="_blank">IoTAA – Further submission by IoTAA Workstream 3 to the Productivity Commission re Data Availability and Use Draft Report</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoT_Alliance_Australia_Submi.pdf" target="_blank">IoT Alliance Australia_Submission to ACCC Communications Market Study V1.3</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_submission_to_Producti.pdf" target="_blank">IoTAA submission to Productivity Commission’s Issues Paper on Data Availability & Use</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_Submission_to_OAIC_dra.pdf" target="_blank">IoTAA Submission to OAIC draft guide on big data and the Australian Privacy Principles</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_submission_to_the_Depa.pdf" target="_blank">IoTAA submission to the Department of Prime Minister & Cabinet Enabling Smart Cities with IoT</a>
+                        <a href="/resource/resmgr/workstream_files/learn_page/IoTAA_State_of_the_Nation_Pr.pdf" target="_blank">IoTAA State of the Nation Presentation</a>
+                    </ol>
                 </div>
             </div>
         </div>
@@ -153,20 +183,15 @@
                 <div class="container" style="width: 100%">
                     <a class="close" style="position: relative;">Close</a>
                     <h3>Useful Links</h3>
-                    <a href="https://ia.acs.org.au" target="_blank">Australian Computer Society Information Age Newsletter</a>
-                    <br>
-                    <a href="https://commsalliance.com.au" target="_blank">Communications Alliance</a>
-                    <br>
-                    <a href="https://iiconsortium.org" target="_blank">Industrial Internet Consortium</a>
-                    <br>
-                    <a href="https://platformi-40.de" target="_blank">Industrie 4 in Germany</a>
-                    <br>
-                    <a href="https://iothub.com.au" target="_blank">IOT Hub – connecting you to the internet of things</a>
-                    <br>
-                    <a href="https://itu.int/eu" target="_blank">ITU’s Smart Sustainable Cities</a>
-                    <br>
-                    <a href="https://iot-analytics.com/" target="_blank">IoT Analytics</a>
-                    <br>
+                    <ol class="numbered-list">
+                        <a href="https://ia.acs.org.au" target="_blank">Australian Computer Society Information Age Newsletter</a>
+                        <a href="https://commsalliance.com.au" target="_blank">Communications Alliance</a>
+                        <a href="https://iiconsortium.org" target="_blank">Industrial Internet Consortium</a>
+                        <a href="https://platformi-40.de" target="_blank">Industrie 4 in Germany</a>
+                        <a href="https://iothub.com.au" target="_blank">IOT Hub – connecting you to the internet of things</a>
+                        <a href="https://itu.int/eu" target="_blank">ITU’s Smart Sustainable Cities</a>
+                        <a href="https://iot-analytics.com/" target="_blank">IoT Analytics</a>
+                    </ol>
                 </div>
             </div>
             <div id="data4" class="data" style="display: none;"> 
