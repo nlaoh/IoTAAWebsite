@@ -163,6 +163,24 @@
       justify-content: space-between; 
       height: 185px;
   }
+  /* Numbering of list */
+  ol {
+      padding-left:15px;
+  }
+  .numbered-list {
+      counter-reset: item;
+  }
+  .numbered-list a {
+      display: block;
+      margin-bottom: 8px; /* Adjust as needed */
+  }
+  .numbered-list a::before {
+      content: counter(item) ". ";
+      counter-increment: item;
+      display: inline-block;
+      width: 20px; /* Adjust as needed for spacing */
+      margin-right: 10px; /* Adjust margin to prevent overlap */
+  }
 </style>
 
 <!-- Top Hero Starts -->
@@ -238,24 +256,17 @@
       <div id="data1" class="data" style="display: none;"> 
         <div class="container">
           <a class="close" style="position: relative;">Close</a>
-          <h3>Frank Zeichner</h3>
-          <p>
-            Frank is a thought leader in the adoption of Internet of Things (IoT), 
-            and the founding CEO of IoTAA. 
-            He is a Partner Manager for the Reliable Affordable Clean Energy for 
-            2030 Cooperative Research Centre (RACE for 2030), an industry-led
-            an initiative that fosters innovation across the energy supply chain to deliver 
-            increased value for consumers. 
-            Frank is also on the board of the NSW Smart Sensing Network, which brings 
-            together smart sensing expertise in academia,
-            industry and government to deliver economic and social benefits for NSW.
-          </p>
+          <h3>Advocacy</h3>
+          <ol class="numbered-list">
+            <a href="/resource/resmgr/workstream_files/smart_places_and_infrastructure/How_IoT_is_set_to_transform_.pdf" target="_blank">How IoT is set to transform the property market</a>
+            <a href="/resource/resmgr/workstream_files/smart_places_and_infrastructure/NTC_Discussion_paper_–_Gover.pdf" target="_blank">NTC Discussion paper – Government access to the vehicle-generated data</a>
+          </ol>
         </div>
       </div>
       <div id="data2" class="data" style="display: none;"> 
         <div class="container">
           <a class="close" style="position: relative;">Close</a>
-          <h3>Frank Zeichner222222</h3>
+          <h3>Practice</h3>
           <p>
             Frank is a thought leader in the adoption of Internet of Things (IoT), 
             and the founding CEO of IoTAA. 
@@ -272,7 +283,7 @@
       <div id="data3" class="data" style="display: none;"> 
         <div class="container">
           <a class="close" style="position: relative;">Close</a>
-          <h3>Frank Zeichner3333333</h3>
+          <h3>Useful Links</h3>
           <p>
             Frank is a thought leader in the adoption of Internet of Things (IoT), 
             and the founding CEO of IoTAA. 
@@ -289,7 +300,7 @@
       <div id="data4" class="data" style="display: none;"> 
         <div class="container">
           <a class="close" style="position: relative;">Close</a>
-          <h3>Frank Zeichner44444444</h3>
+          <h3>Resources</h3>
           <p>
             Frank is a thought leader in the adoption of Internet of Things (IoT), 
             and the founding CEO of IoTAA. 
@@ -344,31 +355,36 @@
 
 <script>
     $(document).ready(function(){	
-      //Hide Bios//
-      var bioInfo = $('.data').hide();
-      //Click and bio Animation//
-      $('.dataBTN').click(function(){
-    	var target = $(this).data("target");
-    	//Hide Open Bios When cliking Other Bio
-    	$(".data").slideUp();
-    	//Open Target Bio// 
-    	$(target).slideDown();	
-    	return false ;
-      });
-      //close button Inside the bio
-      $('.close').click(function(){
-        var myTarget = $(this).closest('.data'); // Find the closest parent div with class "data"
-        myTarget.slideUp();
-        return false;
-    	});
-      //Close Bio by cliking outside  	
-      var $win = $(window); // or $box parent container
-      var $box = $(".box");
-      $win.on("click.Bst", function(event){		
-    	if ( $(".data").has(event.target).length == 0 && !$(".data").is(event.target) //checks if the $box itself was clicked
-    ){
-    	$(".data").slideUp();
-    	}
-      });		  
+        //Hide Bios//
+        var dataInfo = $('.data').hide();
+        //Click and bio Animation//
+        $('.dataBTN').click(function(){
+            var target = $(this).data("target");
+            var $targetData = $(target);
+
+            // Toggle the visibility of the target bio
+            $targetData.slideToggle();
+
+            // Hide other open bios when clicking the same button
+            $(".data").not($targetData).slideUp();
+
+            return false;
+        });
+
+        // Close button Inside the bio
+        $('.close').click(function(){
+            var myTarget = $(this).closest('.data'); // Find the closest parent div with class "data"
+            myTarget.slideUp();
+            return false;
+        });
+
+        // Close Bio by clicking outside  	
+        var $win = $(window); // or $box parent container
+        var $box = $(".box");
+        $win.on("click.Bst", function(event){		
+            if ($(".data").has(event.target).length == 0 && !$(".data").is(event.target)){
+            $(".data").slideUp();
+            }
+        });		  
     });
 </script>
